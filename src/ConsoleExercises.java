@@ -31,6 +31,11 @@ public class ConsoleExercises {
         System.out.print("Width: \n");
         String crWidthString = scan.next();
 
-        int crLength = parseInt(crLengthString);
+        int crLength = Integer.parseInt(crLengthString);
+        int crWidth = Integer.parseInt(crWidthString);
+
+        System.out.printf("Area: %d\n", crLength * crWidth);
+        System.out.printf("Perimeter: %d\n", crLength * 2 + crWidth * 2);
+
     }
 }
