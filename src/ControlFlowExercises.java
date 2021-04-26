@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
 
     public static void main(String[] args) {
@@ -48,26 +50,39 @@ public class ControlFlowExercises {
         ********* FizzBuzz *********
                                   */
 
-//        One of the most common interview questions for entry-level programmers is the FizzBuzz test. Developed by Imran Ghory, the test is designed to assess basic looping and conditional logic skills.
+//        for (int i = 1; i <= 100; i++){
+//            if (i % 3 == 0 && i % 5 == 0){
+//                System.out.println("FizzBuzz");
+//            } else if (i % 3 == 0) {
+//                System.out.println("Fizz");
+//            } else if (i % 5 == 0) {
+//                System.out.println("Buzz");
+//            }
+//            else {
+//                System.out.println(i);
+//            }
+//        }
+
+        /*
+        ******** Table of Powers ********
+                                       */
+//        Display a table of powers.
 //
-//                Write a program that prints the numbers from 1 to 100.
-//        For multiples of three: print “Fizz” instead of the number.
-//        For the multiples of five: print “Buzz”.
-//        For numbers which are multiples of both three and five: print “FizzBuzz”.
+//                Prompt the user to enter an integer.
+//        Display a table of squares and cubes from 1 to the value entered.
+//        Ask if the user wants to continue.
+//        Assume that the user will enter valid data.
+//        Only continue if the user agrees to.
+        Scanner scan = new Scanner(System.in);
 
-        for (int i = 1; i <= 100; i++){
-            if (i % 3 == 0 && i % 5 == 0){
-                System.out.println("FizzBuzz");
-            } else if (i % 3 == 0) {
-                System.out.println("Fizz");
-            } else if (i % 5 == 0) {
-                System.out.println("Buzz");
-            }
-            else {
-                System.out.println(i);
-            }
+        System.out.println("What number would you like to go to?");
+        int input = 5;
+
+        System.out.println("number | squared | cubed");
+        System.out.println("------------------------");
+
+        for (int i = 1; i <= input; i++){
+            System.out.println(i + "      | " + (i * i) + "        | " + (i * i * i));
         }
-
-
     }
 }
