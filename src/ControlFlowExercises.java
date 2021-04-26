@@ -66,23 +66,50 @@ public class ControlFlowExercises {
         /*
         ******** Table of Powers ********
                                        */
-//        Display a table of powers.
-//
-//                Prompt the user to enter an integer.
-//        Display a table of squares and cubes from 1 to the value entered.
-//        Ask if the user wants to continue.
-//        Assume that the user will enter valid data.
-//        Only continue if the user agrees to.
+
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("What number would you like to go to?");
-        int input = 5;
+//        String userAnswer = "Y";
+//
+//        while(userAnswer.equals("Y")) {
+//            System.out.println("What number would you like to go to?");
+//            int input = scan.nextInt();
+//
+//            System.out.println("number | squared | cubed");
+//            System.out.println("------------------------");
+//
+//            for (int i = 1; i <= input; i++) {
+//                System.out.println(i + "      | " + (i * i) + "        | " + (i * i * i));
+//            }
+//            System.out.println("Would you like to keep going? [Y/N]");
+//            userAnswer = scan.next();
+//        }
 
-        System.out.println("number | squared | cubed");
-        System.out.println("------------------------");
+        /*
+        ********* Number Grades to Letter Grades *********
+                                                        */
 
-        for (int i = 1; i <= input; i++){
-            System.out.println(i + "      | " + (i * i) + "        | " + (i * i * i));
+
+        System.out.println("Would you like to enter a grade? [Y/N]");
+        String input = scan.next();
+        while (input.equals("Y")) {
+            System.out.println("Enter a numerical grade from 1-100");
+
+            int grade = scan.nextInt();
+
+            if (grade >= 80 && grade <= 100) {
+                System.out.println("A");
+            } else if (grade >= 80) {
+                System.out.println("B");
+            } else if (grade >= 67) {
+                System.out.println("C");
+            } else if (grade >= 60) {
+                System.out.println("D");
+            } else {
+                System.out.println("F");
+            }
+            System.out.println("Would you like to enter a grade? [Y/N]");
+            input = scan.next();
         }
     }
 }
