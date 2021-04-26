@@ -13,11 +13,16 @@ public class ControlFlowExercises {
 //
 //        5 6 7 8 9 10 11 12 13 14 15
 
-        int i = 5;
-        while(i <= 15) {
-            System.out.print(i + " ");
-            i++;
-        }
+//        int i = 5;
+//        while(i <= 15) {
+//            System.out.print(i + " ");
+//            i++;
+//        }
+
+//        for (int i = 5; i <= 15; i++) {
+//            System.out.print(i + " ");
+//            i++;
+//        }
 
 //        Do While
 //
@@ -32,11 +37,29 @@ public class ControlFlowExercises {
 //        65536
 //        For
 //
-//        Refactor the previous two exercises to use a for loop instead.
-        int j = 0;
+//        TODO: Refactor the previous two exercises to use a for loop instead.
+//        int j = 0;
+//        do {
+//            System.out.println(j);
+//            j += 2;
+//        } while (j <= 100);
+
+//        int k = 100;
+//        do {
+//            System.out.println(k);
+//            k = k - 5;
+//        } while (k >= -10);
+
+        int a = 2;
         do {
-            System.out.println(j);
-            j += 2;
-        } while (j <= 100);
+            System.out.println(a);
+            a = (int) Math.pow(a, 2);
+        } while (a < 1000000);
+
+
+//        for (int j = 0; j <= 100; j += 2) {
+//            System.out.println(j);
+//            j += 2;
+//        }
     }
 }
