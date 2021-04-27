@@ -1,13 +1,62 @@
+import java.util.Scanner;
+
 public class MethodsExercises {
 
     public static void main(String[] args) {
 
+        int userInput = getInteger(1, 10);
+        getFactorial(userInput);
+        diceRoll();
         System.out.println(addition(3, 5));
         System.out.println(subtraction(6, 3));
         System.out.println(multiplication(4, 6));
         System.out.println(division(6, 2));
         System.out.println(modulus(4, 3));
 
+    }
+
+    public static void diceRoll(){
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter how many sides you want on each die in a pair of dice(between 4-20): ");
+        int input = scan.nextInt();
+
+        if (!(input >= 4 && input <= 20)){
+            diceRoll();
+        }
+
+        System.out.print("\nRoll dice? [Y/N]");
+        String choice = scan.nextLine();
+        if (choice.equals("Y")){
+
+
+
+        }
+    }
+
+    public static void getFactorial(int input){
+        System.out.print(input + "! = ");
+
+        long factorial = 1;
+        for (int i = 1; i < input; i++){
+            System.out.print(i + " x ");
+            factorial *= i;
+        }
+        System.out.println(input + "  = " + (factorial * input));
+
+    }
+
+    public static int getInteger(int min, int max){
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter a number between 1 and 10: ");
+        int input = scan.nextInt();
+
+        if (!(input >= min && input <= max)){
+            getInteger(1, 10);
+        }
+        return input;
     }
 
     public static int addition(int a, int b){
