@@ -6,7 +6,7 @@ public class MethodsExercises {
 
         int userInput = getInteger(1, 10);
         getFactorial(userInput);
-        diceRoll();
+        diceRollSimulator();
         System.out.println(addition(3, 5));
         System.out.println(subtraction(6, 3));
         System.out.println(multiplication(4, 6));
@@ -15,23 +15,39 @@ public class MethodsExercises {
 
     }
 
-    public static void diceRoll(){
+    public static void diceRollSimulator(){
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Enter how many sides you want on each die in a pair of dice(between 4-20): ");
         int input = scan.nextInt();
 
         if (!(input >= 4 && input <= 20)){
-            diceRoll();
+            diceRollSimulator();
         }
 
-        System.out.print("\nRoll dice? [Y/N]");
-        String choice = scan.nextLine();
+        System.out.println("\nRoll dice? [Y/N]");
+        String choice = scan.next();
         if (choice.equals("Y")){
+            int die1 = actualDiceRoll(input);
+            int die2 = actualDiceRoll(input);
+            System.out.println("Rolling dice with " + input + " sides...");
+            System.out.println("You rolled a " + die1 + " and a " + die2);
+            if ((die1 + die2) == 2) {
+                System.out.println("Snake Eyes!");
+            } else {
+                System.out.println("Total: " + (die1 + die2));
+            }
 
-
-
+            System.out.println("Would you like to roll again? [Y/N]");
+            choice = scan.next();
+            if (choice.equals("Y")){
+                diceRollSimulator();
+            }
         }
+    }
+
+    public static int actualDiceRoll(int sides) {
+        return (int) (Math.random() * sides - 1 + 1) + 1;
     }
 
     public static void getFactorial(int input){
