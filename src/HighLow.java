@@ -6,19 +6,26 @@ public class HighLow {
 
         Scanner scan = new Scanner(System.in);
 //        The specs for the game are:
-//
-//    TODO Prompts user to guess the number.
-//    TODO All user inputs are validated.
-//           TODO If user's guess is less than the number, it outputs "HIGHER".
-//    TODO If user's guess is more than the number, it outputs "LOWER".
-//    TODO If a user guesses the number, the game should declare "GOOD GUESS!"
 
         int rand = (int) (Math.random() * 100 - 1 + 1) + 1;
         int userInput;
+        int guesses = 5;
         do {
             System.out.println("Guess a number between 1-100: ");
             userInput = scan.nextInt();
 
+            if (userInput > rand && guesses != 1) {
+                guesses -= 1;
+                System.out.println("LOWER. You have " + guesses + " guesses.");
+            } else if (userInput < rand && guesses != 1) {
+                guesses -= 1;
+                System.out.println("HIGHER.  You have " + guesses + " guesses.");
+            } else if (guesses == 1) {
+                System.out.println("Ran out of guesses! Try again!");
+                break;
+            } else {
+                System.out.println("GOOD GUESS NERD!");
+            }
         } while (!(userInput == rand));
     }
 }
