@@ -17,7 +17,7 @@ public class Bob {
         System.out.println("Say something to Bob: ");
         String question = scan.next();
 
-        if (question.charAt(question.length() - 1).equals('?')) {
+        if (question.endsWith("?")) {
             System.out.println("BOB: Sure.");
         }
     }
