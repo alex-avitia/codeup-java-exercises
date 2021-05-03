@@ -39,7 +39,7 @@ public class Input {
 
         public static int getInt(){
             scan = new Scanner(System.in);
-            System.out.println("Enter an integer, I don't care which one this time: ");
+            System.out.println("Enter an integer: ");
             return scan.nextInt();
         }
 //        double getDouble(double min, double max)
@@ -61,7 +61,7 @@ public class Input {
 
         public static double getDouble() {
             scan = new Scanner(System.in);
-            System.out.println("Enter a double, I don't care which one this time: ");
+            System.out.println("Enter a double: ");
             return scan.nextDouble();
         }
 }
