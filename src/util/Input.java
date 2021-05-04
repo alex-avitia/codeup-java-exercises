@@ -1,15 +1,21 @@
 package util;
+
 import java.util.Scanner;
 
 public class Input {
 
-    private static Scanner scan;
+    private final Scanner scan;
+
+    // TODO: fix my scanner yo
+
+    public Input(){
+        this.scan = new Scanner(System.in);
+    }
 
 //        String getString()
 
         public static String getString(){
             System.out.println("Enter a string: ");
-            scan = new Scanner(System.in);
             return scan.next();
         }
 
@@ -24,7 +30,6 @@ public class Input {
 //        int getInt(int min, int max)
 
         public static int getInt(int min, int max) {
-            scan = new Scanner(System.in);
 
             System.out.println("Enter an integer between " + min + " and " + max + ": ");
             int input = scan.nextInt();
@@ -38,14 +43,12 @@ public class Input {
 //        int getInt()
 
         public static int getInt(){
-            scan = new Scanner(System.in);
             System.out.println("Enter an integer: ");
             return scan.nextInt();
         }
 //        double getDouble(double min, double max)
 
         public static double getDouble(double min, double max) {
-            scan = new Scanner(System.in);
 
             System.out.println("Enter a double between " + min + " and " + max + ": ");
             double input = scan.nextDouble();
@@ -60,7 +63,6 @@ public class Input {
 //        double getDouble()
 
         public static double getDouble() {
-            scan = new Scanner(System.in);
             System.out.println("Enter a double: ");
             return scan.nextDouble();
         }
