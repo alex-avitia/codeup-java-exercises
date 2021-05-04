@@ -41,9 +41,9 @@ public class Input {
             return input;
         }
 //        int getInt()
-
+//        Now refactored for the movies application
         public int getInt(){
-            System.out.println("Enter an integer: ");
+            System.out.print("Enter your choice: ");
             return scan.nextInt();
         }
 //        double getDouble(double min, double max)
