@@ -15,5 +15,22 @@ public class ArrayExercises {
         people[1] = new Person("Frank");
         people[2] = new Person("Frida");
 
+        Person[] newPeople;
+        newPeople = addPerson(people, new Person("Ezzy"));
+
+        for (Person newPerson : newPeople) {
+            System.out.println(newPerson.getName());
+        }
+
     }
+
+    public static Person[] addPerson(Person[] people, Person newPerson){
+        int arrLength = people.length;
+
+        Person[] newPeople = Arrays.copyOf(people, arrLength + 1);
+        newPeople[arrLength] = new Person(newPerson.getName());
+
+        return newPeople;
+    }
+
 }
