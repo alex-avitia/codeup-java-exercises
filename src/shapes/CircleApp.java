@@ -6,9 +6,11 @@ public class CircleApp {
 
     public static void main(String[] args) {
 
+        Input scan = new Input();
+
         System.out.println("Provide a radius for your circle.");
 
-        double radius = Input.getDouble();
+        double radius = scan.getDouble();
         Circle newCircle = new Circle(radius);
         double area = newCircle.getArea(radius);
         double circumference = newCircle.getCircumference(radius);

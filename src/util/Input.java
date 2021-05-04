@@ -14,14 +14,14 @@ public class Input {
 
 //        String getString()
 
-        public static String getString(){
+        public String getString(){
             System.out.println("Enter a string: ");
             return scan.next();
         }
 
 //        boolean yesNo()
 
-        public static boolean yesNo() {
+        public boolean yesNo() {
             System.out.println("Type [yes] for ints and [no] for strings, nerd: ");
             String input = getString();
             return input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes");
@@ -29,7 +29,7 @@ public class Input {
 
 //        int getInt(int min, int max)
 
-        public static int getInt(int min, int max) {
+        public int getInt(int min, int max) {
 
             System.out.println("Enter an integer between " + min + " and " + max + ": ");
             int input = scan.nextInt();
@@ -42,13 +42,13 @@ public class Input {
         }
 //        int getInt()
 
-        public static int getInt(){
+        public int getInt(){
             System.out.println("Enter an integer: ");
             return scan.nextInt();
         }
 //        double getDouble(double min, double max)
 
-        public static double getDouble(double min, double max) {
+        public double getDouble(double min, double max) {
 
             System.out.println("Enter a double between " + min + " and " + max + ": ");
             double input = scan.nextDouble();
@@ -62,7 +62,7 @@ public class Input {
 
 //        double getDouble()
 
-        public static double getDouble() {
+        public double getDouble() {
             System.out.println("Enter a double: ");
             return scan.nextDouble();
         }
