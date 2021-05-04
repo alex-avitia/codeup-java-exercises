@@ -1,7 +1,5 @@
 import java.util.Arrays;
 
-import class Person;
-
 public class ArrayExercises {
     public static void main(String[] args) {
 
@@ -12,7 +10,10 @@ public class ArrayExercises {
         int[] numbers = {1, 2, 3, 4, 5};
         System.out.println(Arrays.toString(numbers));
 
-        String[] people = {Person.person1};
+        Person[] people = new Person[3];
+        people[0] = new Person("Alex");
+        people[1] = new Person("Frank");
+        people[2] = new Person("Frida");
 
     }
 }
