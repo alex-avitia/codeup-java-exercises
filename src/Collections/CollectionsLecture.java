@@ -1,8 +1,5 @@
 package Collections;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class CollectionsLecture {
 
@@ -201,6 +198,36 @@ public class CollectionsLecture {
 //        System.out.println(usernames.isEmpty());
 
 
+        /*
+​
+            TODO: Create a HashMap of three people in class with keys using their last name
+             and values at those keys using their first name.
+​
+             Example
+​
+             "Justin" could be returned from nameHashMap.get("Reich")
+​
+            BONUS TODO: Create a HashMap containing three people in the class with keys using their
+             first name and values that are an ArrayList of strings containing at least two
+             objects visible in their background.
+​
+             Example
+​
+             ArrayList<String> with values ("Codeup Sign", "Black Background", "Nothing Else")
+             from backgroundHashMap.get("Justin")
+​
+         */
+
+        // HashMap
+
+        Map <String, List<String>> usernames = new HashMap<>();
+        usernames.put("Ryan", new ArrayList<>(Arrays.asList("ryanorsinger", "cool")));
+//        usernames.put("Luis", "MontealegreLuis");
+//        usernames.put("Zach", "zgulde");
+//        usernames.put("Fernando", "fmendozaro");
+//        usernames.put("Justin", "jreich5");
+        System.out.println(usernames);
     }
+
 
 }
