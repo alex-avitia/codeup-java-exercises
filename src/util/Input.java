@@ -6,7 +6,7 @@ public class Input {
 
     private final Scanner scan;
 
-    // TODO: fix my scanner yo
+    // TODO: modify to work with grocery list app
 
     public Input(){
         this.scan = new Scanner(System.in);
@@ -15,14 +15,12 @@ public class Input {
 //        String getString()
 
         public String getString(){
-            System.out.println("Enter a string: ");
             return scan.next();
         }
 
 //        boolean yesNo()
 
         public boolean yesNo() {
-            System.out.println("Type [yes] for ints and [no] for strings, nerd: ");
             String input = getString();
             return input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes");
         }
@@ -30,8 +28,6 @@ public class Input {
 //        int getInt(int min, int max)
 
         public int getInt(int min, int max) {
-
-            System.out.println("Enter an integer between " + min + " and " + max + ": ");
             int input = scan.nextInt();
 
             while (input < min || input > max) {
@@ -43,14 +39,14 @@ public class Input {
 //        int getInt()
 //        Now refactored for the movies application
         public int getInt(){
-            System.out.print("Enter your choice: ");
+//            System.out.print("Enter your choice: ");
             return scan.nextInt();
         }
 //        double getDouble(double min, double max)
 
         public double getDouble(double min, double max) {
 
-            System.out.println("Enter a double between " + min + " and " + max + ": ");
+//            System.out.println("Enter a double between " + min + " and " + max + ": ");
             double input = scan.nextDouble();
 
             while (input < min || input > max) {
@@ -63,7 +59,7 @@ public class Input {
 //        double getDouble()
 
         public double getDouble() {
-            System.out.println("Enter a double: ");
+//            System.out.println("Enter a double: ");
             return scan.nextDouble();
         }
 }
