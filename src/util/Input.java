@@ -28,30 +28,41 @@ public class Input {
 //        int getInt(int min, int max)
 
         public int getInt(int min, int max) {
-            int input = scan.nextInt();
+            int input = Integer.parseInt(getString());
+        try {
 
             while (input < min || input > max) {
                 System.out.println("Alright bud, very funny. Try again: ");
-                input = scan.nextInt();
+                input = Integer.parseInt(getString());
+            }
+        } catch(NumberFormatException e) {
+            System.out.println("Incorrect data input: " + e);
             }
             return input;
         }
+
+
 //        int getInt()
 //        Now refactored for the movies application
         public int getInt(){
 //            System.out.print("Enter your choice: ");
-            return scan.nextInt();
+
+            return Integer.parseInt(getString());
         }
 //        double getDouble(double min, double max)
 
         public double getDouble(double min, double max) {
 
 //            System.out.println("Enter a double between " + min + " and " + max + ": ");
-            double input = scan.nextDouble();
+            double input = Double.parseDouble(getString());
 
-            while (input < min || input > max) {
-                System.out.println("Alright bud, very funny. Try again: ");
-                input = scan.nextDouble();
+            try {
+                while (input < min || input > max) {
+                    System.out.println("Alright bud, very funny. Try again: ");
+                    input = Double.parseDouble(getString());
+                }
+            } catch(NumberFormatException e) {
+                System.out.println("Incorrect data input: " + e);
             }
             return input;
         }
@@ -60,6 +71,6 @@ public class Input {
 
         public double getDouble() {
 //            System.out.println("Enter a double: ");
-            return scan.nextDouble();
+            return Double.parseDouble(getString());
         }
 }
