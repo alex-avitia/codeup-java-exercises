@@ -1,0 +1,10 @@
+The purpose of these notes is to represent progress with JSP and JSTL exercises through recordable pushes to GitHub,
+as the aforementioned exercises do not convey personal contributions.
+
+---------------------------------------------------------------------
+
+Friday May 28, 2021
+
+    -Worked on JSP and JSTL files with a simple login form that checks for a specific username and password
+     to redirect to different webpages
+    -Included files for a guessing game, still needs to be connected all together.
