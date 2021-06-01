@@ -8,3 +8,15 @@ Friday May 28, 2021
     -Worked on JSP and JSTL files with a simple login form that checks for a specific username and password
      to redirect to different webpages
     -Included files for a guessing game, still needs to be connected all together.
+
+
+
+Sunday May 30, 2021
+
+    -With entire transparency, I spent the weekend resting and healing. This log post is simply to do a daily push.
+
+
+
+Tuesday June 1, 2021
+
+   -Finished MVC exercise, able to display list of ads in the adlister.
