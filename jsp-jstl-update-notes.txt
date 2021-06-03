@@ -20,3 +20,9 @@ Sunday May 30, 2021
 Tuesday June 1, 2021
 
    -Finished MVC exercise, able to display list of ads in the adlister.
+
+
+
+Thursday June 3, 2021
+
+    -finished jdbc exercise. User input needs a lot of work. Working on passwords.
